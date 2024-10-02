@@ -240,7 +240,7 @@ footer{
         height: 88%;
         z-index: -1;
         opacity: 0.6;
-        background: url('image/menubg.jpg') no-repeat center center/cover;}
+        background: url('menubg.jpg') no-repeat center center/cover;}
 .firstsec{
     display: flex;
    align-items: center;
