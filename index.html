@@ -7,6 +7,184 @@
     <title>Tasty Twisty Tadka | twistytadka.com</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        /* Add some CSS styles to enhance the visual appeal */
+        body {
+            font-family: 'Baloo Bhai', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        /* Navbar styles */
+        #navbar {
+            background-color: #343a40;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar ul li {
+            margin: 0 15px;
+        }
+
+        #navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #navbar ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer ul li a:hover {
+            color: #f1c40f;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+        }
+
+        /* Section Backgrounds */
+        #home, #hungerlist, #menu, #services-container, #reviews, #contact {
+            padding: 60px 20px;
+        }
+
+        #home {
+            background-color: #ffeb3b;
+            text-align: center;
+        }
+
+        #hungerlist, #menu, #services-container {
+            background-color: #f4f4f4;
+        }
+
+        #reviews {
+            background-color: #ffcccb;
+        }
+
+        #contact {
+            background-color: #e0f7fa;
+            text-align: center;
+        }
+
+        /* Contact Form Styling */
+        #contact form input, #contact form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #contact form button {
+            padding: 12px 30px;
+            background-color: #f1c40f;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        #contact form button:hover {
+            background-color: #d4ac0d;
+        }
+
+        .h-primary, .h-secondary {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .separation {
+            margin: 40px 0;
+            border-top: 2px solid #ccc;
+        }
+
+        /* Review Box */
+        .flip-box {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .flip-box-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-box-front {
+            background-color: #f4f4f4;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flip-box-back {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: rotateY(180deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -29,7 +207,7 @@
 
     <section id="home">
         <h1 class="h-primary">Welcome to Tasty Twisty Tadka</h1>
-        <h2 class="h-primarys">"Feed your Hunger","Feed your Soul"</h2>
+        <h2 class="h-primarys">"Feed your Hunger", "Feed your Soul"</h2>
         <p>"Warning : Our food may cause excessive happiness"</p>
         <p>"Craving something delicious? Order now!!"</p>
         <button class="btn">Order Now</button>
@@ -161,33 +339,39 @@
         <h1 class="h-primary center">Reviews</h1>
         <div class="review-container">
             <div class="flip-box">
-                <div class="front">
-                    <h2>Review 1</h2>
-                    <p>"Excellent Service!"</p>
-                </div>
-                <div class="back">
-                    <h2>Rating: 5/5</h2>
-                    <p>"Highly skilled, responsive, and dedicated to delivering exceptional results. Highly recommend!"</p>
-                </div>
-            </div>
-            <div class="flip-box">
-                <div class="front">
-                    <h2>Review 2</h2>
-                    <p>"Fantastic Customer Support!"</p>
-                </div>
-                <div class="back">
-                    <h2>Rating: 4/5</h2>
-                    <p>"Prompt, friendly, and knowledgeable. Went above and beyond to resolve my issue."</p>
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Review 1</h2>
+                        <p>"Excellent Service!"</p>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Rating: 5/5</h2>
+                        <p>"Highly skilled, responsive, and dedicated to delivering exceptional results. Highly recommend!"</p>
+                    </div>
                 </div>
             </div>
             <div class="flip-box">
-                <div class="front">
-                    <h2>Review 3</h2>
-                    <p>"Delicious Food!"</p>
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Review 2</h2>
+                        <p>"Fantastic Customer Support!"</p>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Rating: 4/5</h2>
+                        <p>"Prompt, friendly, and knowledgeable. Went above and beyond to resolve my issue."</p>
+                    </div>
                 </div>
-                <div class="back">
-                    <h2>Rating: 5/5</h2>
-                    <p>"The food was amazing! Every dish was flavorful and made to perfection!"</p>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Review 3</h2>
+                        <p>"Delicious Food!"</p>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Rating: 5/5</h2>
+                        <p>"The food was amazing! Every dish was flavorful and made to perfection!"</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,7 +389,7 @@
         </form>
     </section>
 
-    <footer id="footer">
+    <footer>
         <div class="footer-content">
             <ul>
                 <li><a href="#home">Home</a></li>
